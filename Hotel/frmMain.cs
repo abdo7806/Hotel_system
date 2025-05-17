@@ -5,6 +5,7 @@ using Hotel.Payments;
 using Hotel.Reservations;
 using Hotel.Rooms;
 using Hotel.User;
+using HotelManagement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -109,6 +110,12 @@ namespace Hotel
         {
             frmListPayments frmListPayments = new frmListPayments();
             frmListPayments.ShowDialog();
+        }
+
+        private void op6_Click(object sender, EventArgs e)
+        {
+            ReportForm frm = new ReportForm();
+            frm.ShowDialog();
         }
     }
 }

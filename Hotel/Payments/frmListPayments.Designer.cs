@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.lblRecordsCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,9 +37,10 @@
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.txtFilterValue = new System.Windows.Forms.TextBox();
             this.dgvPayments = new System.Windows.Forms.DataGridView();
+            this.dtbPaymentDate = new System.Windows.Forms.DateTimePicker();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dtbPaymentDate = new System.Windows.Forms.DateTimePicker();
+            this.userControl11 = new Hotel.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -140,19 +141,28 @@
             this.dgvPayments.MultiSelect = false;
             this.dgvPayments.Name = "dgvPayments";
             this.dgvPayments.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPayments.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPayments.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPayments.RowHeadersWidth = 51;
             this.dgvPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPayments.Size = new System.Drawing.Size(935, 321);
             this.dgvPayments.TabIndex = 181;
             this.dgvPayments.TabStop = false;
+            // 
+            // dtbPaymentDate
+            // 
+            this.dtbPaymentDate.Location = new System.Drawing.Point(333, 285);
+            this.dtbPaymentDate.Name = "dtbPaymentDate";
+            this.dtbPaymentDate.Size = new System.Drawing.Size(200, 24);
+            this.dtbPaymentDate.TabIndex = 192;
+            this.dtbPaymentDate.Visible = false;
+            this.dtbPaymentDate.ValueChanged += new System.EventHandler(this.dtbPaymentDate_ValueChanged);
             // 
             // btnClose
             // 
@@ -179,14 +189,14 @@
             this.pictureBox1.TabIndex = 182;
             this.pictureBox1.TabStop = false;
             // 
-            // dtbPaymentDate
+            // userControl11
             // 
-            this.dtbPaymentDate.Location = new System.Drawing.Point(333, 285);
-            this.dtbPaymentDate.Name = "dtbPaymentDate";
-            this.dtbPaymentDate.Size = new System.Drawing.Size(200, 24);
-            this.dtbPaymentDate.TabIndex = 192;
-            this.dtbPaymentDate.Visible = false;
-            this.dtbPaymentDate.ValueChanged += new System.EventHandler(this.dtbPaymentDate_ValueChanged);
+            this.userControl11.BackColor = System.Drawing.Color.White;
+            this.userControl11.Location = new System.Drawing.Point(12, 17);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.userControl11.Size = new System.Drawing.Size(292, 83);
+            this.userControl11.TabIndex = 193;
             // 
             // frmListPayments
             // 
@@ -194,6 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1003, 716);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.dtbPaymentDate);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.btnClose);
@@ -228,5 +239,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvPayments;
         private System.Windows.Forms.DateTimePicker dtbPaymentDate;
+        private UserControl1 userControl11;
     }
 }

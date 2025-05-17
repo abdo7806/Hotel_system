@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.chkRememberMe = new System.Windows.Forms.CheckBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.userControl11 = new Hotel.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -59,6 +60,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Black;
+            this.splitContainer1.Panel1.Controls.Add(this.userControl11);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             // 
@@ -79,29 +81,6 @@
             this.splitContainer1.SplitterDistance = 350;
             this.splitContainer1.TabIndex = 160;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Hotel.Properties.Resources.hotel_icon_3_;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 163);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(289, 199);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 161;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.Image = global::Hotel.Properties.Resources.closeBlack32;
-            this.button1.Location = new System.Drawing.Point(22, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 60);
-            this.button1.TabIndex = 169;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -121,26 +100,6 @@
             this.label3.Size = new System.Drawing.Size(135, 21);
             this.label3.TabIndex = 165;
             this.label3.Text = "اسم المستخدم";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(503, 265);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(33, 38);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 168;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(503, 210);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(33, 38);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 167;
-            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -197,6 +156,58 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hotel.Properties.Resources.hotel;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 149);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(307, 285);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 161;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.Image = global::Hotel.Properties.Resources.closeBlack32;
+            this.button1.Location = new System.Drawing.Point(22, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 60);
+            this.button1.TabIndex = 169;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(503, 265);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(33, 38);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 168;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(503, 210);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(33, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 167;
+            this.pictureBox2.TabStop = false;
+            // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.Color.White;
+            this.userControl11.Location = new System.Drawing.Point(21, 34);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.userControl11.Size = new System.Drawing.Size(317, 83);
+            this.userControl11.TabIndex = 162;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -207,6 +218,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -235,6 +247,7 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private UserControl1 userControl11;
     }
 }
 

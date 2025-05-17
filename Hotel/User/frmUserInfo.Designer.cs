@@ -36,7 +36,7 @@
             // ctrlUserCard1
             // 
             this.ctrlUserCard1.BackColor = System.Drawing.Color.White;
-            this.ctrlUserCard1.Location = new System.Drawing.Point(-3, 122);
+            this.ctrlUserCard1.Location = new System.Drawing.Point(2, 94);
             this.ctrlUserCard1.Name = "ctrlUserCard1";
             this.ctrlUserCard1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ctrlUserCard1.Size = new System.Drawing.Size(701, 238);

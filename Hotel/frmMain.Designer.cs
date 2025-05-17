@@ -44,7 +44,10 @@
             this.معلوماتالمستخدمالحاليةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تغييركلمةالمرورToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تسجيلالخروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.userControl11 = new Hotel.UserControl1();
             this.msMainMenue.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // msMainMenue
@@ -89,8 +92,10 @@
             this.op2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.الحجوزاتToolStripMenuItem,
             this.ادارةالحجوزاتToolStripMenuItem});
+            this.op2.Image = global::Hotel.Properties.Resources.reservation__1_;
+            this.op2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.op2.Name = "op2";
-            this.op2.Size = new System.Drawing.Size(101, 32);
+            this.op2.Size = new System.Drawing.Size(165, 68);
             this.op2.Text = "الحجوزات";
             this.op2.Click += new System.EventHandler(this.op2_Click);
             // 
@@ -119,28 +124,37 @@
             // 
             // op4
             // 
+            this.op4.Image = global::Hotel.Properties.Resources.billing__3_;
+            this.op4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.op4.Name = "op4";
-            this.op4.Size = new System.Drawing.Size(85, 32);
+            this.op4.Size = new System.Drawing.Size(149, 68);
             this.op4.Text = "الفواتير";
             this.op4.Click += new System.EventHandler(this.op4_Click);
             // 
             // op5
             // 
+            this.op5.Image = global::Hotel.Properties.Resources.invoice__1_;
+            this.op5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.op5.Name = "op5";
-            this.op5.Size = new System.Drawing.Size(115, 32);
+            this.op5.Size = new System.Drawing.Size(179, 68);
             this.op5.Text = "المدفوعات";
             this.op5.Click += new System.EventHandler(this.op5_Click);
             // 
             // op6
             // 
+            this.op6.Image = global::Hotel.Properties.Resources.seo_report__1_;
+            this.op6.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.op6.Name = "op6";
-            this.op6.Size = new System.Drawing.Size(85, 32);
+            this.op6.Size = new System.Drawing.Size(149, 68);
             this.op6.Text = "التقارير";
+            this.op6.Click += new System.EventHandler(this.op6_Click);
             // 
             // op7
             // 
+            this.op7.Image = global::Hotel.Properties.Resources.gear;
+            this.op7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.op7.Name = "op7";
-            this.op7.Size = new System.Drawing.Size(103, 32);
+            this.op7.Size = new System.Drawing.Size(167, 68);
             this.op7.Text = "الإعدادات";
             // 
             // op8
@@ -191,11 +205,34 @@
             this.تسجيلالخروجToolStripMenuItem.Text = "تسجيل الخروج";
             this.تسجيلالخروجToolStripMenuItem.Click += new System.EventHandler(this.تسجيلالخروجToolStripMenuItem_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Hotel.Properties.Resources.hotel;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 72);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1924, 983);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.Color.White;
+            this.userControl11.Location = new System.Drawing.Point(22, 89);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.userControl11.Size = new System.Drawing.Size(292, 83);
+            this.userControl11.TabIndex = 4;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.userControl11);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.msMainMenue);
             this.Name = "frmMain";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -204,6 +241,7 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.msMainMenue.ResumeLayout(false);
             this.msMainMenue.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,5 +265,7 @@
         private System.Windows.Forms.ToolStripMenuItem تسجيلالخروجToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem الحجوزاتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ادارةالحجوزاتToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private UserControl1 userControl11;
     }
 }

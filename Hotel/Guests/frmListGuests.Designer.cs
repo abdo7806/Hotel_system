@@ -50,6 +50,7 @@
             this.btnAddUser = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtbDate = new System.Windows.Forms.DateTimePicker();
+            this.userControl11 = new Hotel.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGuests)).BeginInit();
             this.cmsUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -276,12 +277,22 @@
             this.dtbDate.Visible = false;
             this.dtbDate.ValueChanged += new System.EventHandler(this.dtbDate_ValueChanged);
             // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.Color.White;
+            this.userControl11.Location = new System.Drawing.Point(12, 12);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.userControl11.Size = new System.Drawing.Size(292, 83);
+            this.userControl11.TabIndex = 196;
+            // 
             // frmListGuests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1320, 712);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.dtbDate);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRecordsCount);
@@ -327,5 +338,6 @@
         private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker dtbDate;
+        private UserControl1 userControl11;
     }
 }

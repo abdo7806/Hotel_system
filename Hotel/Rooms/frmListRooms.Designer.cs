@@ -50,6 +50,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.userControl11 = new Hotel.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
             this.cmsUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -285,12 +286,22 @@
             this.pictureBox1.TabIndex = 106;
             this.pictureBox1.TabStop = false;
             // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.Color.White;
+            this.userControl11.Location = new System.Drawing.Point(14, 21);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.userControl11.Size = new System.Drawing.Size(292, 83);
+            this.userControl11.TabIndex = 161;
+            // 
             // frmListRooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1320, 712);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.cmbRoomType);
             this.Controls.Add(this.btnClose);
@@ -338,5 +349,6 @@
         private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.ComboBox cmbRoomType;
+        private UserControl1 userControl11;
     }
 }

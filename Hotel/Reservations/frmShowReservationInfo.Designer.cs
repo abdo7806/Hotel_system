@@ -38,6 +38,7 @@
             this.ctrlResevationCard1.BackColor = System.Drawing.Color.White;
             this.ctrlResevationCard1.Location = new System.Drawing.Point(12, 40);
             this.ctrlResevationCard1.Name = "ctrlResevationCard1";
+            this.ctrlResevationCard1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ctrlResevationCard1.Size = new System.Drawing.Size(1299, 696);
             this.ctrlResevationCard1.TabIndex = 0;
             // 
@@ -77,7 +78,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlResevationCard1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmShowReservationInfo";
             this.Text = "frmShowReservation";
             this.Load += new System.EventHandler(this.frmShowReservationInfo_Load);

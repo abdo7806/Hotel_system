@@ -51,6 +51,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.pbPersonImage = new System.Windows.Forms.PictureBox();
+            this.userControl11 = new Hotel.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.cmsUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
@@ -294,12 +295,22 @@
             this.pbPersonImage.TabIndex = 110;
             this.pbPersonImage.TabStop = false;
             // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.Color.White;
+            this.userControl11.Location = new System.Drawing.Point(12, 14);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.userControl11.Size = new System.Drawing.Size(292, 83);
+            this.userControl11.TabIndex = 115;
+            // 
             // frmListUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1373, 749);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.cbIsActive);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddUser);
@@ -347,5 +358,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
+        private UserControl1 userControl11;
     }
 }

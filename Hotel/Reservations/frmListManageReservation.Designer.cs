@@ -37,18 +37,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvReservation = new System.Windows.Forms.DataGridView();
             this.cmsReservations = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.lblRecordsCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dtbDate = new System.Windows.Forms.DateTimePicker();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.pbPersonImage = new System.Windows.Forms.PictureBox();
-            this.dtbDate = new System.Windows.Forms.DateTimePicker();
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userControl11 = new Hotel.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservation)).BeginInit();
             this.cmsReservations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
@@ -169,45 +170,10 @@
             this.cmsReservations.Name = "contextMenuStrip1";
             this.cmsReservations.Size = new System.Drawing.Size(181, 168);
             // 
-            // showDetailsToolStripMenuItem
-            // 
-            this.showDetailsToolStripMenuItem.Image = global::Hotel.Properties.Resources.PersonDetails_32;
-            this.showDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 38);
-            this.showDetailsToolStripMenuItem.Text = "&Show Details";
-            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Image = global::Hotel.Properties.Resources.sign_add_icon1;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 38);
-            this.toolStripMenuItem1.Text = "Add";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Image = global::Hotel.Properties.Resources.edit_32;
-            this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 38);
-            this.editToolStripMenuItem.Text = "&Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Image = global::Hotel.Properties.Resources.Delete_32_2;
-            this.deleteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 38);
-            this.deleteToolStripMenuItem.Text = "&Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -232,6 +198,15 @@
             this.label2.Size = new System.Drawing.Size(116, 25);
             this.label2.TabIndex = 123;
             this.label2.Text = "# Records:";
+            // 
+            // dtbDate
+            // 
+            this.dtbDate.Location = new System.Drawing.Point(347, 273);
+            this.dtbDate.Name = "dtbDate";
+            this.dtbDate.Size = new System.Drawing.Size(200, 24);
+            this.dtbDate.TabIndex = 194;
+            this.dtbDate.Visible = false;
+            this.dtbDate.ValueChanged += new System.EventHandler(this.dtbDate_ValueChanged);
             // 
             // btnClose
             // 
@@ -270,14 +245,49 @@
             this.pbPersonImage.TabIndex = 119;
             this.pbPersonImage.TabStop = false;
             // 
-            // dtbDate
+            // showDetailsToolStripMenuItem
             // 
-            this.dtbDate.Location = new System.Drawing.Point(347, 273);
-            this.dtbDate.Name = "dtbDate";
-            this.dtbDate.Size = new System.Drawing.Size(200, 24);
-            this.dtbDate.TabIndex = 194;
-            this.dtbDate.Visible = false;
-            this.dtbDate.ValueChanged += new System.EventHandler(this.dtbDate_ValueChanged);
+            this.showDetailsToolStripMenuItem.Image = global::Hotel.Properties.Resources.PersonDetails_32;
+            this.showDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 38);
+            this.showDetailsToolStripMenuItem.Text = "&Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = global::Hotel.Properties.Resources.sign_add_icon1;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 38);
+            this.toolStripMenuItem1.Text = "Add";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Image = global::Hotel.Properties.Resources.edit_32;
+            this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 38);
+            this.editToolStripMenuItem.Text = "&Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = global::Hotel.Properties.Resources.Delete_32_2;
+            this.deleteToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 38);
+            this.deleteToolStripMenuItem.Text = "&Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.Color.White;
+            this.userControl11.Location = new System.Drawing.Point(12, 14);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.userControl11.Size = new System.Drawing.Size(292, 83);
+            this.userControl11.TabIndex = 195;
             // 
             // frmListManageReservation
             // 
@@ -285,6 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1527, 816);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.dtbDate);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRecordsCount);
@@ -329,5 +340,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.DateTimePicker dtbDate;
+        private UserControl1 userControl11;
     }
 }
