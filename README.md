@@ -51,11 +51,13 @@ Hotel_System/
 ```
 ## 🚀 How to Run | كيفية التشغيل
 
-1. Configure SQL Server database with the provided SQL scripts | إعداد قاعدة البيانات باستخدام الاستعلامات والإجراءات المخزنة
-2. Open the solution in Visual Studio | افتح المشروع في Visual Studio
-3. Build and run the WinForms application | بناء وتشغيل تطبيق سطح المكتب
-4. Login as Admin or User | تسجيل الدخول كمشرف أو مستخدم
-5. Start managing hotel operations | ابدأ بإدارة عمليات الفندق
+1. Clone the project and open it in **Visual Studio**.
+2. Restore NuGet packages.
+3. Open **SQL Server Management Studio**, restore the database from `HotelDB.bak` (inside `SQL_Scripts` folder).
+4. Check the connection string in `App.config` and update server name if needed.
+5. Set the project as Startup and press **F5** to run.
+اسم المستخدم: admin
+كلمة المرور: admin123
 
 ---
 
